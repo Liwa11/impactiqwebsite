@@ -60,10 +60,7 @@ https://templatemo.com/tm-590-topic-listing
                         <span>IMPACT IQ</span>
                     </a>
 
-                    <div class="d-lg-none ms-auto me-4">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll" id="profile-button"></a>
-                    </div>
-    
+                    
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -98,15 +95,13 @@ https://templatemo.com/tm-590-topic-listing
 
                                     <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
 
-                                    <li><a id="chat-link" href="https://impact-iq-chat-v3-hlm6o1w60-ouail-bouakkas-projects.vercel.app/#" style="display: none;">Impact IQ Chat</a></li>
+                                    <li><a class="dropdown-item" href="https://impact-iq-chat-v4.vercel.app/login" target="_blank">Impact IQ Chat</a></li>
                                 </ul>
                             </li>
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <button id="profile-button" style="background: none; border: none;">
-                                <img src="images/profile-icon.svg" alt="Login" style="width: 24px; height: 24px;" />
-                            </button>
+                            <!-- Login/profile button verwijderd -->
                         </div>
                     </div>
                 </div>
@@ -726,27 +721,23 @@ https://templatemo.com/tm-590-topic-listing
             </section>
 
             <div id="login-container" style="text-align:center; margin-top:20px;">
-                <input type="password" id="password-input" placeholder="Enter password">
-                <button onclick="checkPassword()">Login</button>
-                <p id="login-error" style="color:red;"></p>
+                <!-- Login container verwijderd -->
             </div>
 
-            <button id="profile-button" style="background:none; border:none;">
-                <img src="path/to/icon.svg" alt="profile" style="width:24px; height:24px;" />
-            </button>
-            <a id="chat-link" href="https://impact-iq-chat-v3-hlm6o1w60-ouail-bouakkas-projects.vercel.app/#" style="display:none;">Impact IQ Chat</a>
+            <!-- Profiel/login knop verwijderd -->
+            <!-- Chat-link blijft, maar wordt altijd zichtbaar -->
+            <a href="https://impact-iq-chat-v4.vercel.app/login" target="_blank" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+">
+  <img src="images/chat-icon.png" alt="Chat met Impact IQ" width="64" height="64" style="box-shadow: 0 0 10px rgba(0,0,0,0.2); border-radius: 50%;">
+</a>
 
-            <!-- LOGIN MODAL -->
-            <div id="login-modal" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; z-index:1000; box-shadow:0 4px 8px rgba(0,0,0,0.2); border-radius:8px;">
-                <h3 style="margin-bottom:15px;">Login</h3>
-                <input type="email" id="email" placeholder="Email" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;"><br>
-                <input type="password" id="password" placeholder="Password" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;"><br>
-                <button onclick="login()" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:4px; cursor:pointer;">Login</button>
-                <button onclick="closeLogin()" style="padding:10px 20px; background:#ccc; color:black; border:none; border-radius:4px; cursor:pointer; margin-left:10px;">Cancel</button>
-                <p id="login-error" style="color:red; margin-top:10px;"></p>
-            </div>
+            <!-- LOGIN MODAL verwijderd -->
 
-            <button onclick="openLogin()">Open Login</button>
+            <!-- Open Login knop verwijderd -->
 
         </main>
 
@@ -831,147 +822,14 @@ https://templatemo.com/tm-590-topic-listing
         <script src="js/custom.js"></script>
 
         <script>
-            const correctPassword = "impact2024"; // Verander dit wachtwoord
-          
-            function checkPassword() {
-              const input = document.getElementById("password-input").value;
-              if (input === correctPassword) {
-                localStorage.setItem("loggedIn", "true");
-                location.reload();
-              } else {
-                document.getElementById("login-error").innerText = "Incorrect password.";
-              }
-            }
-          
-            function logout() {
-              localStorage.removeItem("loggedIn");
-              location.reload();
-            }
-          
-            window.onload = function() {
-              const loggedIn = localStorage.getItem("loggedIn");
-              const profileBtn = document.getElementById("profile-button");
-              const chatLink = document.getElementById("chat-link");
-          
-              if (loggedIn === "true") {
-                document.getElementById("login-container").style.display = "none";
-                if (chatLink) chatLink.style.display = "inline-block";
-                if (profileBtn) profileBtn.innerText = "Logout";
-                if (profileBtn) profileBtn.onclick = logout;
-              } else {
-                if (chatLink) chatLink.style.display = "none";
-              }
-            };
-
-            function openLogin() {
-                document.getElementById("login-modal").style.display = "block";
-            }
-
-            function closeLogin() {
-                document.getElementById("login-modal").style.display = "none";
-            }
-
-            function login() {
-                const email = document.getElementById("email").value;
-                const password = document.getElementById("password").value;
-
-                auth.signInWithEmailAndPassword(email, password)
-                    .then(() => {
-                        closeLogin();
-                        location.reload();
-                    })
-                    .catch(error => {
-                        document.getElementById("login-error").innerText = error.message;
-                    });
-            }
-
-            window.onload = function() {
-                const loggedIn = localStorage.getItem("loggedIn");
-                const profileBtn = document.getElementById("profile-button");
-                const chatLink = document.getElementById("chat-link");
-
-                if (loggedIn === "true") {
-                    if (profileBtn) profileBtn.innerText = "Logout";
-                    if (profileBtn) profileBtn.onclick = function() {
-                        localStorage.removeItem("loggedIn");
-                        location.reload();
-                    };
-                    if (chatLink) chatLink.style.display = "inline-block";
-                } else {
-                    if (chatLink) chatLink.style.display = "none";
-                }
-            };
-          </script>
+            // Login scripts verwijderd
+        </script>
 
           <!-- Firebase SDK -->
-          <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
-          
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-              apiKey: "AIzaSyDDt-ngJ6ueH-_P7kv1jZZ6SjOoIQZypbI",
-              authDomain: "impactiqwebsite.firebaseapp.com",
-              projectId: "impactiqwebsite",
-              storageBucket: "impactiqwebsite.appspot.com",
-              messagingSenderId: "878228226671",
-              appId: "1:878228226671:web:34a6be14d9b307cdddc39a",
-              measurementId: "G-SYLDQ4BTR0"
-            };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-          </script>
+          <!-- Firebase scripts verwijderd -->
 
           <script type="module">
-            // Firebase Authentication
-            import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-
-            const auth = getAuth();
-
-            function showLogin() {
-              document.getElementById("login-modal").style.display = "block";
-            }
-
-            function closeLogin() {
-              document.getElementById("login-modal").style.display = "none";
-            }
-
-            function login() {
-              const email = document.getElementById("email").value;
-              const password = document.getElementById("password").value;
-
-              signInWithEmailAndPassword(auth, email, password)
-                .then(() => {
-                  location.reload();
-                })
-                .catch(error => {
-                  document.getElementById("login-error").innerText = error.message;
-                });
-            }
-
-            function logout() {
-              signOut(auth).then(() => {
-                location.reload();
-              });
-            }
-
-            onAuthStateChanged(auth, user => {
-              const chatLink = document.getElementById("chat-link");
-              const loginBtn = document.getElementById("profile-button");
-
-              if (user) {
-                if (chatLink) chatLink.style.display = "block";
-                loginBtn.innerText = "Logout";
-                loginBtn.onclick = logout;
-              } else {
-                if (chatLink) chatLink.style.display = "none";
-                loginBtn.innerText = "Login";
-                loginBtn.onclick = showLogin;
-              }
-            });
+            // Firebase Authentication scripts verwijderd
           </script>
 
     </body>
