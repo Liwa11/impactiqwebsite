@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Impact IQ - AI-powered insights and tools for the modern professional. Discover smart solutions, learn cutting-edge skills, and stay ahead in the digital age.">
+        <meta name="author" content="Impact IQ">
+
+        <title>Impact IQ | AI-Powered Insights for Modern Professionals</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+
+        <!-- Firebase Scripts -->
+        <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
+        <script>
+            // Initialize Firebase
+            const firebaseConfig = {
+                apiKey: "JOUW_API_KEY",
+                authDomain: "JOUW_PROJECT_ID.firebaseapp.com",
+                projectId: "JOUW_PROJECT_ID",
+                storageBucket: "JOUW_PROJECT_ID.appspot.com",
+                messagingSenderId: "XXXXXXX",
+                appId: "APP_ID"
+            };
+            
+            // Initialize Firebase
+            const app = firebase.initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+        </script>
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi-back"></i>
+                        <span>IMPACT IQ</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll" id="profile-button"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_2">Explore Insights</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_3">How It Works</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4">FAQs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+
+                                    <li><a id="chat-link" href="https://impact-iq-chat-v3-hlm6o1w60-ouail-bouakkas-projects.vercel.app/#" style="display: none;">Impact IQ Chat</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <button id="profile-button" style="background: none; border: none;">
+                                <img src="images/profile-icon.svg" alt="Login" style="width: 24px; height: 24px;" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h1 class="text-white text-center">Unlock Your Potential with AI-Powered Insights</h1>
+
+                            <h6 class="text-center">Empowering professionals with smart, actionable intelligence</h6>
+
+                            <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bi-search" id="basic-addon1">
+                                        
+                                    </span>
+
+                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="AI, Machine Learning, Data Science, Digital Strategy..." aria-label="Search">
+
+                                    <button type="submit" class="form-control">Discover Insights</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="featured-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block bg-white shadow-lg">
+                                <a href="topics-detail.html">
+                                    <div class="d-flex">
+                                        <div>
+                                            <h5 class="mb-2">AI & Machine Learning</h5>
+
+                                            <p class="mb-0">Explore cutting-edge AI applications and machine learning techniques transforming industries.</p>
+                                        </div>
+
+                                        <span class="badge bg-design rounded-pill ms-auto">14</span>
+                                    </div>
+
+                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="custom-block custom-block-overlay">
+                                <div class="d-flex flex-column h-100">
+                                    <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-overlay-text d-flex">
+                                        <div>
+                                            <h5 class="text-white mb-2">Data Intelligence</h5>
+
+                                            <p class="text-white">Transform raw data into strategic insights with our comprehensive analytics tools and methodologies.</p>
+
+                                            <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Explore Now</a>
+                                        </div>
+
+                                        <span class="badge bg-finance rounded-pill ms-auto">25</span>
+                                    </div>
+
+                                    <div class="social-share d-flex">
+                                        <p class="text-white me-4">Share:</p>
+
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-pinterest"></a>
+                                            </li>
+                                        </ul>
+
+                                        <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
+                                    </div>
+
+                                    <div class="section-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="explore-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="mb-4">Explore Our Insights</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">AI & ML</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">Digital Strategy</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Data Science</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">Tech Innovation</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">Future Skills</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">AI Automation Tools</h5>
+
+                                                            <p class="mb-0">Discover how AI-powered automation can streamline your business processes and boost productivity.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-design rounded-pill ms-auto">14</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="AI Automation">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Machine Learning</h5>
+
+                                                            <p class="mb-0">Learn to implement ML models that solve real-world business challenges and drive innovation.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-design rounded-pill ms-auto">12</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="Machine Learning">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Natural Language Processing</h5>
+
+                                                            <p class="mb-0">Harness the power of NLP to analyze text, understand context, and automate communication.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-design rounded-pill ms-auto">8</span>
+                                                    </div>
+
+                                                    <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="NLP">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Digital Transformation</h5>
+
+                                                            <p class="mb-0">Navigate your organization's digital journey with proven strategies and frameworks.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-advertising rounded-pill ms-auto">15</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_online_ad_re_ol62.png" class="custom-block-image img-fluid" alt="Digital Transformation">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Tech Strategy</h5>
+
+                                                            <p class="mb-0">Develop a winning technology strategy that aligns with your business objectives.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-advertising rounded-pill ms-auto">10</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Group_video_re_btu7.png" class="custom-block-image img-fluid" alt="Tech Strategy">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Innovation Management</h5>
+
+                                                            <p class="mb-0">Learn to foster innovation and implement emerging technologies effectively.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-advertising rounded-pill ms-auto">12</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_viral_tweet_gndb.png" class="custom-block-image img-fluid" alt="Innovation">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Data Analytics</h5>
+
+                                                            <p class="mb-0">Transform complex data into actionable insights that drive business decisions.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-finance rounded-pill ms-auto">18</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Finance_re_gnv2.png" class="custom-block-image img-fluid" alt="Data Analytics">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="custom-block custom-block-overlay">
+                                                <div class="d-flex flex-column h-100">
+                                                    <img src="images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg" class="custom-block-image img-fluid" alt="Predictive Analytics">
+
+                                                    <div class="custom-block-overlay-text d-flex">
+                                                        <div>
+                                                            <h5 class="text-white mb-2">Predictive Analytics</h5>
+
+                                                            <p class="text-white">Leverage advanced analytics to forecast trends and make data-driven predictions.</p>
+
+                                                            <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Explore Now</a>
+                                                        </div>
+
+                                                        <span class="badge bg-finance rounded-pill ms-auto">15</span>
+                                                    </div>
+
+                                                    <div class="social-share d-flex">
+                                                        <p class="text-white me-4">Share:</p>
+
+                                                        <ul class="social-icon">
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                                            </li>
+
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                                            </li>
+
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-pinterest"></a>
+                                                            </li>
+                                                        </ul>
+
+                                                        <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
+                                                    </div>
+
+                                                    <div class="section-overlay"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Emerging Tech</h5>
+
+                                                            <p class="mb-0">Stay ahead with insights into cutting-edge technologies shaping the future.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-music rounded-pill ms-auto">12</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Compose_music_re_wpiw.png" class="custom-block-image img-fluid" alt="Emerging Tech">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Smart Solutions</h5>
+
+                                                            <p class="mb-0">Discover innovative tools and platforms that solve complex business challenges.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-music rounded-pill ms-auto">10</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_happy_music_g6wc.png" class="custom-block-image img-fluid" alt="Smart Solutions">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Tech Trends</h5>
+
+                                                            <p class="mb-0">Stay informed about the latest technological developments and their business impact.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-music rounded-pill ms-auto">8</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Podcast_audience_re_4i5q.png" class="custom-block-image img-fluid" alt="Tech Trends">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">AI Skills</h5>
+
+                                                            <p class="mb-0">Develop essential AI competencies to thrive in the digital economy.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-education rounded-pill ms-auto">20</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Graduation_re_gthn.png" class="custom-block-image img-fluid" alt="AI Skills">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Digital Leadership</h5>
+
+                                                            <p class="mb-0">Master the skills needed to lead teams and organizations through digital transformation.</p>
+                                                        </div>
+
+                                                        <span class="badge bg-education rounded-pill ms-auto">15</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Online_learning_re_qw08.png" class="custom-block-image img-fluid" alt="Digital Leadership">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="timeline-section section-padding" id="section_3">
+                <div class="section-overlay"></div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="text-white mb-4">How Impact IQ Works</h2>
+                        </div>
+
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <div class="timeline-container">
+                                <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
+                                    <div class="list-progress">
+                                        <div class="inner"></div>
+                                    </div>
+
+                                    <li>
+                                        <h4 class="text-white mb-3">Discover Relevant Insights</h4>
+
+                                        <p class="text-white">Access our curated collection of AI-powered insights and tools tailored to your professional needs and interests.</p>
+
+                                        <div class="icon-holder">
+                                          <i class="bi-search"></i>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <h4 class="text-white mb-3">Save & Organize</h4>
+
+                                        <p class="text-white">Bookmark valuable resources and organize them in your personal knowledge hub for easy access.</p>
+
+                                        <div class="icon-holder">
+                                          <i class="bi-bookmark"></i>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <h4 class="text-white mb-3">Learn & Apply</h4>
+
+                                        <p class="text-white">Dive deep into topics, apply insights to your work, and stay ahead in your field with our intelligent learning platform.</p>
+
+                                        <div class="icon-holder">
+                                          <i class="bi-book"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-center mt-5">
+                            <p class="text-white">
+                                Ready to transform your professional journey?
+                                <a href="#" class="btn custom-btn custom-border-btn ms-3">Start Learning</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="faq-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <h2 class="mb-4">Frequently Asked Questions</h2>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-lg-5 col-12">
+                            <img src="images/faq_graphic.jpg" class="img-fluid" alt="FAQs">
+                        </div>
+
+                        <div class="col-lg-6 col-12 m-auto">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            What is Impact IQ?
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Impact IQ is an AI-powered platform designed to empower professionals with smart insights and tools. We combine cutting-edge technology with expert knowledge to help you stay ahead in the digital age.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            How do I find relevant content?
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Our intelligent search system helps you discover content based on your interests and professional needs. You can browse by category, use keywords, or let our AI recommend personalized content for you.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Is Impact IQ free to use?
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            We offer both free and premium content. Basic access to our platform is free, while premium features provide deeper insights, advanced tools, and personalized learning paths.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="contact-section section-padding section-bg" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+                            <h2 class="mb-5">Connect With Us</h2>
+                        </div>
+
+                        <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.353808988094!2d4.379231076374409!3d50.8431321590127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c49f6912a799%3A0x56a05296657fbb70!2sWetstraat%20200%2C%201000%20Brussel!5e0!3m2!1snl!2sbe!4v1744797456580!5m2!1snl!2sbe" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
+                            <h4 class="mb-3">BRUSSELS HQ</h4>
+
+                            <p>Rue de la Loi 200, 1000 Brussels, Belgium</p>
+
+                            <hr>
+
+                            <p class="d-flex align-items-center mb-1">
+                                <span class="me-2">Phone</span>
+
+                                <a href="tel: +31 6 16 17 59 11" class="site-footer-link">
+                                    +31 6 16 17 59 11 (WHATSAPP)
+                                </a>
+                            </p>
+
+                            <p class="d-flex align-items-center">
+                                <span class="me-2">Email</span>
+
+                                <a href="mailto:info@impactiq.com" class="site-footer-link">
+                                    info@impactiq.be
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mx-auto">
+                            <h4 class="mb-3">TANGER Office</h4>
+
+                            <p>TANGER, Morocco</p>
+
+                            <hr>
+
+                            <p class="d-flex align-items-center mb-1">
+                                <span class="me-2">Phone</span>
+
+                                <a href="tel: +31 6 16 17 59 11"2 class="site-footer-link">
+                                    R+31 6 16 17 59 11 (WHATSAPP)
+                                </a>
+                            </p>
+
+                            <p class="d-flex align-items-center">
+                                <span class="me-2">Email</span>
+
+                                <a href="mailto:dubai@impactiq.com" class="site-footer-link">
+                                    tanger@impactiq.be
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div id="login-container" style="text-align:center; margin-top:20px;">
+                <input type="password" id="password-input" placeholder="Enter password">
+                <button onclick="checkPassword()">Login</button>
+                <p id="login-error" style="color:red;"></p>
+            </div>
+
+            <button id="profile-button" style="background:none; border:none;">
+                <img src="path/to/icon.svg" alt="profile" style="width:24px; height:24px;" />
+            </button>
+            <a id="chat-link" href="https://impact-iq-chat-v3-hlm6o1w60-ouail-bouakkas-projects.vercel.app/#" style="display:none;">Impact IQ Chat</a>
+
+            <!-- LOGIN MODAL -->
+            <div id="login-modal" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; z-index:1000; box-shadow:0 4px 8px rgba(0,0,0,0.2); border-radius:8px;">
+                <h3 style="margin-bottom:15px;">Login</h3>
+                <input type="email" id="email" placeholder="Email" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;"><br>
+                <input type="password" id="password" placeholder="Password" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;"><br>
+                <button onclick="login()" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:4px; cursor:pointer;">Login</button>
+                <button onclick="closeLogin()" style="padding:10px 20px; background:#ccc; color:black; border:none; border-radius:4px; cursor:pointer; margin-left:10px;">Cancel</button>
+                <p id="login-error" style="color:red; margin-top:10px;"></p>
+            </div>
+
+            <button onclick="openLogin()">Open Login</button>
+
+        </main>
+
+<footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi-back"></i>
+                            <span>IMPACT IQ</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Home</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">How It Works</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">FAQs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: +31 6 16 17 59 11" class="site-footer-link">
+                                +31 6 16 17 59 11 (WHATSAPP)
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@impactiq.com" class="site-footer-link">
+                                info@impactiq.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English</button>
+
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Dutch</button></li>
+
+                                <li><button class="dropdown-item" type="button">French</button></li>
+
+                                <li><button class="dropdown-item" type="button">Arabic</button></li>
+                            </ul>
+                        </div>
+
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2025 IMPACT IQ. All rights reserved.
+                        <br><br>Design: <a rel="nofollow" href="VISUALS IQ" target="_blank">VISUAL IQ</a></p>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+        <script>
+            const correctPassword = "impact2024"; // Verander dit wachtwoord
+          
+            function checkPassword() {
+              const input = document.getElementById("password-input").value;
+              if (input === correctPassword) {
+                localStorage.setItem("loggedIn", "true");
+                location.reload();
+              } else {
+                document.getElementById("login-error").innerText = "Incorrect password.";
+              }
+            }
+          
+            function logout() {
+              localStorage.removeItem("loggedIn");
+              location.reload();
+            }
+          
+            window.onload = function() {
+              const loggedIn = localStorage.getItem("loggedIn");
+              const profileBtn = document.getElementById("profile-button");
+              const chatLink = document.getElementById("chat-link");
+          
+              if (loggedIn === "true") {
+                document.getElementById("login-container").style.display = "none";
+                if (chatLink) chatLink.style.display = "inline-block";
+                if (profileBtn) profileBtn.innerText = "Logout";
+                if (profileBtn) profileBtn.onclick = logout;
+              } else {
+                if (chatLink) chatLink.style.display = "none";
+              }
+            };
+
+            function openLogin() {
+                document.getElementById("login-modal").style.display = "block";
+            }
+
+            function closeLogin() {
+                document.getElementById("login-modal").style.display = "none";
+            }
+
+            function login() {
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+
+                auth.signInWithEmailAndPassword(email, password)
+                    .then(() => {
+                        closeLogin();
+                        location.reload();
+                    })
+                    .catch(error => {
+                        document.getElementById("login-error").innerText = error.message;
+                    });
+            }
+
+            window.onload = function() {
+                const loggedIn = localStorage.getItem("loggedIn");
+                const profileBtn = document.getElementById("profile-button");
+                const chatLink = document.getElementById("chat-link");
+
+                if (loggedIn === "true") {
+                    if (profileBtn) profileBtn.innerText = "Logout";
+                    if (profileBtn) profileBtn.onclick = function() {
+                        localStorage.removeItem("loggedIn");
+                        location.reload();
+                    };
+                    if (chatLink) chatLink.style.display = "inline-block";
+                } else {
+                    if (chatLink) chatLink.style.display = "none";
+                }
+            };
+          </script>
+
+          <!-- Firebase SDK -->
+          <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyDDt-ngJ6ueH-_P7kv1jZZ6SjOoIQZypbI",
+              authDomain: "impactiqwebsite.firebaseapp.com",
+              projectId: "impactiqwebsite",
+              storageBucket: "impactiqwebsite.appspot.com",
+              messagingSenderId: "878228226671",
+              appId: "1:878228226671:web:34a6be14d9b307cdddc39a",
+              measurementId: "G-SYLDQ4BTR0"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+
+          <script type="module">
+            // Firebase Authentication
+            import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+            const auth = getAuth();
+
+            function showLogin() {
+              document.getElementById("login-modal").style.display = "block";
+            }
+
+            function closeLogin() {
+              document.getElementById("login-modal").style.display = "none";
+            }
+
+            function login() {
+              const email = document.getElementById("email").value;
+              const password = document.getElementById("password").value;
+
+              signInWithEmailAndPassword(auth, email, password)
+                .then(() => {
+                  location.reload();
+                })
+                .catch(error => {
+                  document.getElementById("login-error").innerText = error.message;
+                });
+            }
+
+            function logout() {
+              signOut(auth).then(() => {
+                location.reload();
+              });
+            }
+
+            onAuthStateChanged(auth, user => {
+              const chatLink = document.getElementById("chat-link");
+              const loginBtn = document.getElementById("profile-button");
+
+              if (user) {
+                if (chatLink) chatLink.style.display = "block";
+                loginBtn.innerText = "Logout";
+                loginBtn.onclick = logout;
+              } else {
+                if (chatLink) chatLink.style.display = "none";
+                loginBtn.innerText = "Login";
+                loginBtn.onclick = showLogin;
+              }
+            });
+          </script>
+
+    </body>
+</html>
